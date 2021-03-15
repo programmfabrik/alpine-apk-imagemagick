@@ -1,0 +1,7 @@
+volumes/src
+abuild/*
+!abuild/abuild.conf
+*.zip
+*.tar.gz
+*.apk
+output/
