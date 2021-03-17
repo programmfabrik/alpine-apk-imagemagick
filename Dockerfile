@@ -38,8 +38,12 @@ RUN apk update && \
         libraw \
         zip \
         p7zip \
-        librsvg-dev \
-        potrace
+        potrace \
+        openjpeg-dev \
+        pkgconfig \
+        openjpeg-tools
+
+# jpeg-dev \
 
 RUN mkdir -p /var/cache/distfiles && \
     chgrp abuild /var/cache/distfiles && \
@@ -55,6 +59,8 @@ RUN chown -R dev:abuild  /volumedata /home/dev/.abuild
 
 USER dev:abuild
 
-RUN cd /volumedata && abuild && ls -l /home/dev/packages/x86_64/
+RUN cd /volumedata && abuild 
 
-ENTRYPOINT [ "watch", "-n", "1", "echo", "world" ]
+#&& ls -l /home/dev/packages/x86_64/
+
+ENTRYPOINT [ "watch", "-n", "1", "ls", "-l", "/home/dev/packages/x86_64/" ]

@@ -9,4 +9,4 @@ services:
       - "/entrypoint.sh"
     volumes: 
       - "./entrypoint.sh:/entrypoint.sh"
-      - ./imagemagick.tar.gz:/imagemagick.tar.gz
+      - ./output/imagemagick.tar.gz:/imagemagick.tar.gz

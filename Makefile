@@ -22,6 +22,6 @@ shutdown: copy
 	docker rm $(container_name)
 
 package: shutdown
-	tar -czvf $(output_dir)/imagemagick.tar.gz $(output_dir)/x86_64/*
+	tar -czvf $(output_dir)/imagemagick.tar.gz -C $(output_dir)/x86_64 .
 
 all: package
