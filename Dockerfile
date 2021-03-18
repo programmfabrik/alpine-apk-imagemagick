@@ -15,6 +15,7 @@ RUN apk update && \
         ghostscript-dev \
         libtool \
         tiff-dev \
+        tiff \
         lcms2-dev \
         libwebp-dev \
         libxml2-dev \
@@ -44,7 +45,9 @@ RUN apk update && \
         openjpeg-dev \
         pkgconfig \
         openjpeg-tools \
-        jasper-dev
+        jasper-dev \
+        terminus-font \
+        ttf-liberation
 
 RUN mkdir -p /var/cache/distfiles && \
     chgrp abuild /var/cache/distfiles && \

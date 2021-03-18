@@ -49,6 +49,25 @@ convert $imageName.png -resize 100x100 $imageName.svg
 
 sleep 10
 
+identify $imageName.jpg
+identify $imageName.jpeg
+identify $imageName.tif
+identify $imageName.tiff
+identify $imageName.png
+identify $imageName.jp2
+identify $imageName.gif
+identify $imageName.webp
+identify $imageName.psd
+identify $imageName.ico
+identify $imageName.bmp
+identify $imageName.eps
+identify $imageName.ai
+identify $imageName.ppm
+identify $imageName.heic
+identify $imageName.svg
+
+sleep 60
+
 echo "execute watch"
 
 watch -n 1 echo world
