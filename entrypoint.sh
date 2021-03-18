@@ -11,7 +11,7 @@ tar -xvf imagemagick.tar.gz
 
 echo "apk add repo"
 
-apk add --repository /imagemagick imagemagick
+apk add --repository /imagemagick imagemagick-custom --allow-untrusted
 
 sleep 5
 
