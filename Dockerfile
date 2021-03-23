@@ -1,5 +1,7 @@
 FROM alpine:3.13.2
 
+RUN echo "https://dl-cdn.alpinelinux.org/alpine/v3.10/main" >> /etc/apk/repositories
+
 RUN apk update && \
     apk upgrade && \
     apk add alpine-sdk alpine-conf apk-tools sudo git bash atools vim linux-headers libcap-dev alpine-make-rootfs && \
@@ -13,6 +15,7 @@ RUN apk update && \
         ghostscript-dev \
         libtool \
         tiff-dev \
+        tiff \
         lcms2-dev \
         libwebp-dev \
         libxml2-dev \
@@ -38,8 +41,13 @@ RUN apk update && \
         libraw \
         zip \
         p7zip \
-        librsvg-dev \
-        potrace
+        potrace \
+        openjpeg-dev \
+        pkgconfig \
+        openjpeg-tools \
+        jasper-dev \
+        terminus-font \
+        ttf-liberation
 
 RUN mkdir -p /var/cache/distfiles && \
     chgrp abuild /var/cache/distfiles && \
@@ -55,6 +63,8 @@ RUN chown -R dev:abuild  /volumedata /home/dev/.abuild
 
 USER dev:abuild
 
-RUN cd /volumedata && abuild && ls -l /home/dev/packages/x86_64/
+RUN cd /volumedata && \
+    abuild && \
+    tar -czvf /home/dev/imagemagick.tar.gz -C /home/dev/packages .
 
-ENTRYPOINT [ "watch", "-n", "1", "echo", "world" ]
+ENTRYPOINT [ "watch", "-n", "1", "ls", "-l", "/home/dev/packages/x86_64/" ]

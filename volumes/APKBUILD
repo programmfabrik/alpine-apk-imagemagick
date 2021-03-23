@@ -17,7 +17,8 @@ makedepends="zlib-dev libpng-dev libjpeg-turbo-dev freetype-dev fontconfig-dev p
 	ghostscript-dev libtool tiff-dev lcms2-dev libwebp-dev libxml2-dev libx11-dev 
 	libxext-dev chrpath libheif-dev openjpeg librsvg-dev freetype fontconfig 
 	ghostscript ghostscript-fonts lcms2 graphviz libzip zstd-dev djvulibre 
-	jbig2dec xz-dev openexr pango libraw zip p7zip potrace"
+	jbig2dec xz-dev openexr pango libraw zip p7zip potrace openjpeg-dev pkgconfig
+	openjpeg-tools"
 
 case "$CARCH" in
 	s390x) ;;
@@ -116,6 +117,8 @@ build() {
 		's:DOCUMENTATION_PATH="$DATA_DIR/doc/$DOCUMENTATION_RELATIVE_PATH":DOCUMENTATION_PATH="/usr/share/doc/imagemagick":g' \
 		configure
 	./configure \
+		--with-modules \
+		--enable-shared \
 		--build=$CBUILD \
 		--host=$CHOST \
 		--prefix=/usr \
@@ -132,7 +135,6 @@ build() {
 		--with-gslib \
 		--with-gs-font-dir=/usr/share/fonts/Type1 \
 		--with-heic \
-		--with-modules \
 		--with-xml \
 		--with-perl \
         --with-openjp2 \
