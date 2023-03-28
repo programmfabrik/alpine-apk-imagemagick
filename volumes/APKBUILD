@@ -4,7 +4,7 @@
 # Modified by: Leon Steinhäuser <leon.steinhaeuser@fylr.io>
 pkgname=imagemagick-custom
 _pkgname=ImageMagick
-pkgver=7.0.11.2
+pkgver=7.1.1.5
 pkgrel=0
 _pkgver=${pkgver%.*}-${pkgver##*.}
 _abiver=7
@@ -195,4 +195,4 @@ _perlmagick_doc() {
 	make -j1 DESTDIR="$subpkgdir" doc_vendor_install
 }
 
-sha512sums="6c62de294011b54557f9605af1b13034ac139c7b4d1481e098cd4a6eadc2bf953bb70cdb289b9067eae2aed200b8d577fa13bc27124e63c7760395bc965a676d  ImageMagick-7.0.11-2.tar.gz"
+sha512sums="1cd590c7043e0c925a110fd9bd0140cba248909a9555d24727b58d80d479ed1f7a2526e39ed94c9fb22241768f625f55c01692acc324876cb4f3020157ebb624  ImageMagick-7.1.1-5.tar.gz"

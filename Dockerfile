@@ -1,6 +1,6 @@
-FROM alpine:3.13.2
+FROM alpine:latest
 
-RUN echo "https://dl-cdn.alpinelinux.org/alpine/v3.10/main" >> /etc/apk/repositories
+#RUN echo "https://dl-cdn.alpinelinux.org/alpine/v3.10/main" >> /etc/apk/repositories
 
 RUN apk update && \
     apk upgrade && \
