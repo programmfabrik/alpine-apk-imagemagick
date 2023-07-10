@@ -2,6 +2,8 @@ docker_image_name = alpine-build-imagemagick
 container_name = alpine-build-imagemagick
 output_dir = ./output
 
+all: package
+
 clean:
 	rm -rf ./output
 
@@ -23,4 +25,3 @@ shutdown: copy
 
 package: shutdown
 
-all: package
