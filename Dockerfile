@@ -21,6 +21,7 @@ RUN apk update && \
         libxml2-dev \
         libx11-dev \
         libxext-dev \
+        libwmf-dev \
         chrpath \
         libheif-dev \
         openjpeg \
