@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.20
 
 #RUN echo "https://dl-cdn.alpinelinux.org/alpine/v3.10/main" >> /etc/apk/repositories
 

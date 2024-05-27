@@ -1,12 +1,12 @@
 version: "3"
 services:
   test-alpine:
-    image: alpine:3.17.2
+    image: alpine:3.20
     container_name: imagemagick-test
     command:
       - "sh"
       - "-c"
       - "/entrypoint.sh"
-    volumes: 
+    volumes:
       - "./entrypoint.sh:/entrypoint.sh"
       - ./output/imagemagick.tar.gz:/imagemagick.tar.gz

@@ -13,10 +13,10 @@ url="https://www.imagemagick.org/"
 arch="all"
 license="ImageMagick"
 options="libtool"
-makedepends="zlib-dev libpng-dev libjpeg-turbo-dev freetype-dev fontconfig-dev perl-dev 
-	ghostscript-dev libtool tiff-dev lcms2-dev libwebp-dev libxml2-dev libx11-dev 
-	libxext-dev chrpath libheif-dev openjpeg librsvg-dev freetype fontconfig 
-	ghostscript ghostscript-fonts lcms2 graphviz libzip zstd-dev djvulibre 
+makedepends="zlib-dev libpng-dev libjpeg-turbo-dev freetype-dev fontconfig-dev perl-dev
+	ghostscript-dev libtool tiff-dev lcms2-dev libwebp-dev libxml2-dev libx11-dev
+	libxext-dev chrpath libheif-dev openjpeg librsvg-dev freetype fontconfig
+	ghostscript ghostscript-fonts lcms2 graphviz libzip zstd-dev djvulibre
 	jbig2dec xz-dev openexr pango libraw zip p7zip potrace openjpeg-dev pkgconfig
 	openjpeg-tools"
 
