@@ -57,6 +57,10 @@ RUN mkdir -p /var/cache/distfiles && \
 ADD ./volumes /volumedata
 ADD ./abuild /home/dev/.abuild
 
+RUN cp /home/dev/.abuild/-603ce745.rsa.pub /etc/apk/keys/ && \
+	chmod a+r /etc/apk/keys/-603ce745.rsa.pub && \
+	apk update
+
 RUN adduser dev --disabled-password && addgroup dev abuild && addgroup root abuild
 RUN echo "dev    ALL=(ALL:ALL)NOPASSWD:ALL" > /etc/sudoers.d/dev
 
